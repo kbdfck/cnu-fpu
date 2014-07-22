@@ -5,9 +5,7 @@ Cisco IP phones firmware packer/unpacker (794X, 796X and others)
 
 Description
 ===========
-This is an utility for packing/unpacking of Cisco IP Phone firmwares based on CNU_File_Archive_3.0 format, called so after strings found in firmware files. These are 7911/7906, 7941/7961, 7970/7971 and others for 79xx series phones. Firmwares for 3911, 7931 and other newer models have different format and can't be unpacked with this utility.
-About
-Some development history and firmware format description will be availeble soon, partly translated from Russian.
+This is an utility for packing/unpacking of Cisco IP Phone firmwares based on CNU_File_Archive_3.0 format, called so after strings found in firmware files. Phones using this firmware format are 7911/7906, 7941/7961, 7970/7971 and others for 79xx series phones. Firmwares for 3911, 7931 and some newer models have different format and can't be unpacked with this utility. Some development history and firmware format description will be availeble soon, partly translated from Russian.
 
 You can contact the author at kbdfck@virtualab.ru
 
