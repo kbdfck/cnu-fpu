@@ -1,0 +1,45 @@
+Description
+-----------
+CNU_fpu is a pack/unpack utility for Cisco IP Phones firmware files (7941, 7961, 7911-12 and others based on CNU_File_Archive_3.0 format)
+Written by kbdfck at virtualab.ru
+Firmware file format and research notes are available at http://virtualab.ru/project/cnu-fpu
+
+
+Useless notice
+--------------
+You can [not so] easily brick your device by loading incorrectly modified firmwares. Be careful with CNUxx-* files.
+
+
+Usage
+-----
+Unpack main firmware .zip or .sbn archive. 
+.sbn archives are actually .tar.gz with signature attached.
+You can remove signature from tar.gz file, but most tar implementations will detect its header.
+	unsign.pl <source_file> gz <source_file-unsigned>
+
+
+1. Unsign firmware file you want to unpack:
+	unsign.pl <source_file> cnu <source_file-unsigned>
+
+
+2. Unpack unsigned firmware file contents to directory:
+	fpu.pl --unpack --input-file=input_filename [--output-dir=some/dir] [--quiet]
+
+Output dir is set to input_filename-unpacked by default
+
+3. Do something with firmware
+
+4. Pack directory contents into a firmware file:
+	fpu.pl --pack --input-dir=some/dir --output-file=new_cool_firmware_file [--quiet]
+
+5. Fire up your TFTP server and place modified firmware file there ;)
+
+6. Reset your phone to force upgrade procedure. Reset method depends on phone model.
+For 7941/7961 you must hold # key on keypad for 5 or more seconds immediately after power on. When phone starts blinking like christmas tree,
+enter 123456789*0# on phone keypad to complete reset. Phone will try to download your modified firmware from TFTP.
+You can also try to modify .loads files, forcing phone to load firmware file with name different from original one.
+
+
+Troubleshooting
+---------------
+Actually, troubleshooting is out of scope of this README. You can drop me a line to kbdfck@virtualab.ru, also see http://voip-info.org
