@@ -14,7 +14,7 @@ Few things to note
 
 Original firmware files are distributed with digital signature placed at beginning of file. To unpack firmware file you should remove signature with tool included in distribution, see README. Actually, repacked files should be signed too, but phones accept unsigned firmwares by default. In case you use Cisco Call Manager with firmware security features enabled, you should disable this on per phone basis or find the way to sign modified firmwares with correct keys, possibly found in Call Manager. I don't really know.
 
-<a href="http://virtualab.ru/cnu_fpu-0.2.tar.gz">Download cnu_cpu-0.2.tar.gz</a>
+<a href="http://virtualab.ru/projects/cnu-fpu/cnu_fpu-0.2.tar.gz">Download cnu_cpu-0.2.tar.gz</a>
 
 How to use it
 =============
